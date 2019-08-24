@@ -1,0 +1,57 @@
+<mvc:View 
+	controllerName="com.ploud.CopyExcel.controller.CopyPaste" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:c="com.ploud.CopyExcel.excel">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<c:CopyPasteTable id='idTable' items="{/items}">
+							<c:items>
+								<ColumnListItem id='idColListTemp'>
+									<cells>
+										<Input value="{Empno}"></Input>
+										<Input value="{Fname}"></Input>
+										<Input value="{Lname}"></Input>
+										<Input value="{Addrs}"></Input>
+										<Input value="{Desgn}"></Input>
+									</cells>
+								</ColumnListItem>
+							</c:items>
+							<c:columns>
+								<Column >
+									<header>
+										<Text text="Empno"></Text>
+									</header>
+								</Column>
+								<Column >
+									<header>
+										<Text text="Fname"></Text>
+									</header>
+								</Column>
+								<Column >
+									<header>
+										<Text text="Lname"></Text>
+									</header>
+								</Column>
+								<Column >
+									<header>
+										<Text text="Addrs"></Text>
+									</header>
+								</Column>
+								<Column >
+									<header>
+										<Text text="Desgn"></Text>
+									</header>
+								</Column>
+							</c:columns>
+						</c:CopyPasteTable>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
